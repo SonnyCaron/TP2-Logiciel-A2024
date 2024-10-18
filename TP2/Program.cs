@@ -49,16 +49,16 @@ Console.WriteLine("Les programmes, les cours en gros et les sessions du " + cege
 Console.WriteLine();
 
 //ÉTAPE 3
-si1.AjouterCours(C420114);
-si1.AjouterCours(C420124);
-si1.AjouterCours(C420134);
-si2.AjouterCours(C420214);
-si2.AjouterCours(C420223);
-si2.AjouterCours(C420233);
-si2.AjouterCours(C420243);
-cegepGranby.ChercherProgramme("informatique").ChercherSession("Session 3").AjouterCours(cegepGranby.ChercherCours("420-314-GR"));
-si3.AjouterCours(cegepGranby.ChercherCours("420-323-GR"));
-si3.AjouterCours(cegepGranby.ChercherCours("420-335-GR"));
-si3.AjouterCours(cegepGranby.ChercherCours("420-343-GR"));
-Console.WriteLine("ÉTAPE 3");
-Console.WriteLine("Les programmes, les cours en gros et les sessions du " + cegepGranby.ToString());
+//si1.AjouterCours(C420114);
+//si1.AjouterCours(C420124);
+//si1.AjouterCours(C420134);
+//si2.AjouterCours(C420214);
+//si2.AjouterCours(C420223);
+//si2.AjouterCours(C420233);
+//si2.AjouterCours(C420243);
+//cegepGranby.ChercherProgramme("informatique").ChercherSession("Session 3").AjouterCours(cegepGranby.ChercherCours("420-314-GR"));
+//si3.AjouterCours(cegepGranby.ChercherCours("420-323-GR"));
+//si3.AjouterCours(cegepGranby.ChercherCours("420-335-GR"));
+//si3.AjouterCours(cegepGranby.ChercherCours("420-343-GR"));
+//Console.WriteLine("ÉTAPE 3");
+//Console.WriteLine("Les programmes, les cours en gros et les sessions du " + cegepGranby.ToString());

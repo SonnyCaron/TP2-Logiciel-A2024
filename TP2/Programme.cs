@@ -33,15 +33,16 @@ namespace TP2
         {
             return Nom.CompareTo(other.Nom);
         }
-        public Session? ChercherSessions(string nomSession)
+        public Session? ChercherSession(string nomSession)
         {
             return sessions.Find(session => session.Nom == nomSession);
         }
         public Session AjouterSession(string nomSession)
         {
-            if (ChercherSessions(nomSession) == null) throw new Exception("Le programme contient déjà cette session.");
-            sessions.Add(new Session(nomSession));
-            return sessions[-1];
+            if (ChercherSession(nomSession) != null) throw new Exception("Le programme contient déjà cette session.");
+            Session output = new Session(nomSession);
+            sessions.Add(output);
+            return output;
         }
     }
 }

@@ -35,25 +35,26 @@ namespace TP2
             }
             return output;
         }
-        public Cours? ChercherCours(Cours cour)
+        public Cours? ChercherCours(string cour)
         {
-            return cours.Find(cour2 => cour.Nom == cour2.Nom);
+            return cours.Find(cour2 => cour == cour2.Nom);
         }
         public Cours AjouterCoursAutorise(Cours cour)
         {
-            if (!cours.Contains(cour)) throw new Exception("Le cégep contient déjà ce cours.");
+            if (cours.Contains(cour)) throw new Exception("Le cégep contient déjà ce cours.");
             cours.Add(cour);
             return cour;
         }
-        public Programme? ChercherProgramme(Programme programme)
+        public Programme? ChercherProgramme(string programme)
         {
-            return programmes.Find(programme2 => programme.Nom == programme2.Nom);
+            return programmes.Find(programme2 => programme == programme2.Nom);
         }
-        public Programme AjouterProgramme(Programme programme)
+        public Programme AjouterProgramme(string programme)
         {
-            if (programmes.Contains(programme)) throw new Exception("Le cégep contient déjà ce programme.");
-            programmes.Add(programme);
-            return programme;
+            if (programmes.Find(programme2 => programme == programme2.Nom) is not null) throw new Exception("Le cégep contient déjà ce programme.");
+            Programme output = new Programme(programme);
+            programmes.Add(output);
+            return output;
         }
     }
 }
